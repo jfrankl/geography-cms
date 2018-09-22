@@ -45,13 +45,27 @@
 		maxZoom: 19
 	}).addTo(map);
 
+	function getStyle(feature) {
+
+		let color = 'red';
+
+		if (feature.properties.scalerank < 2) { color = 'blue' } else
+		if (feature.properties.scalerank < 5) { color = 'green' } else
+		if (feature.properties.scalerank < 10) { color = 'brown' } 
+
+		return {
+			color: color,
+		}
+	}
+
 	fetch('/data/geography.json').then(function(response) { 
 		return response.json();
 	}).then(function(data) {
 		var myGeojson = L.geoJSON(data, {
 		  onEachFeature: function (feature, layer) {
 		    layer.bindPopup(feature.properties.title);
-		  }
+		  },
+		  style: getStyle
 		}).addTo(map);
 		map.fitBounds(myGeojson.getBounds());
 	});
