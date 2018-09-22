@@ -11,13 +11,6 @@ collections: # A list of collections the CMS should be able to edit
     create: true
     fields: 
       - { label: "Parcel Name", name: "title", widget: string }
-      - { label: "Body", name: "body", widget: markdown }
+      - { label: "Body", name: "body", widget: markdown, required: false }
       - { label: "Geometry", name: "geojson", widget: geojson }
       - { label: "Scale Rank", name: "scalerank", widget: number }
-      - label: "Category"
-        name: "category"
-        widget: "relation"
-        collection: "categories"
-        searchFields: ["title"]
-        valueField: "title"
-        displayFields: ["title", "icon"]
