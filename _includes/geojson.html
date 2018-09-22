@@ -1,0 +1,20 @@
+{% capture geojson %}
+    {{ site.geography }}
+	[
+	    {% for slide in site[include.collection] %}
+	    {% capture replace1 %}{% raw %}}}]}{% endraw %}{% endcapture %}
+	    
+	    {% capture replace2 %}{% raw %}}}{% endraw %}{% endcapture %}
+	    
+	    {% capture properties %}
+		    "properties":{
+		    	{% for property in include.properties %}
+		    		"{{ property }}": "{{ slide[property] | parse }}"
+			    {% if forloop.last %}{% else %},{% endif %}{% endfor %}
+	    {% endcapture %}
+
+	    {{ slide.geojson | replace: '"properties":{', properties | remove: '{"type":"FeatureCollection","features":[' | replace: replace1, replace2 }}
+	    {% if forloop.last %}{% else %},{% endif %}{% endfor %}
+	]
+{% endcapture %}{{ geojson | remove: "	" | normalize_whitespace | remove: "
+" }}

@@ -1,0 +1,8 @@
+---
+layout: null
+collection: geography
+properties:
+ - title
+ - scalerank
+---
+{% include geojson.html collection=page.collection properties = page.properties %}

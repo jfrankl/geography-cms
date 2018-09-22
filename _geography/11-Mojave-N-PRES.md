@@ -1,0 +1,14 @@
+---
+unit_code: "MOJA"
+unit_name: "Mojave N PRES"
+unit_type: "National Preserve"
+nps_region: "Pacific West"
+scalerank: 4
+note: "null"
+name: "Mojave N PRES"
+featureclass: "National Park Service"
+geojson: >-
+  {"type":"Feature","properties":{},"geometry":{"type":"Polygon","coordinates":[[[-115.70320638020834,35.48095703125],[-115.71284993489584,35.548543294270836],[-115.61629231770834,35.587158203125],[-115.51969401041667,35.592000325520836],[-115.51969401041667,35.5244140625],[-115.57767740885417,35.51957194010417],[-115.57283528645834,35.505086263020836],[-115.62593587239584,35.495442708333336],[-115.69356282552084,35.4713134765625],[-115.70320638020834,35.48095703125]]]}}
+number: 11
+title: "Mojave N PRES"
+---

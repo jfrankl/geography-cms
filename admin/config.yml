@@ -1,0 +1,23 @@
+backend:
+  name: git-gateway
+  branch: master # Branch to update (master by default)
+
+media_folder: "img/uploads" # Folder where user uploaded files should go
+
+collections: # A list of collections the CMS should be able to edit
+  - name: "geography"
+    label: "Geography"
+    folder: "_geography"
+    create: true
+    fields: 
+      - { label: "Parcel Name", name: "title", widget: string }
+      - { label: "Body", name: "body", widget: markdown }
+      - { label: "Geometry", name: "geojson", widget: geojson }
+      - { label: "Scale Rank", name: "scalerank", widget: number }
+      - label: "Category"
+        name: "category"
+        widget: "relation"
+        collection: "categories"
+        searchFields: ["title"]
+        valueField: "title"
+        displayFields: ["title", "icon"]

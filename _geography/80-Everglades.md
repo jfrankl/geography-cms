@@ -1,0 +1,14 @@
+---
+unit_code: "EVER"
+unit_name: "Everglades NP"
+unit_type: "National Park"
+nps_region: "Southeast"
+scalerank: 8
+note: "null"
+name: "Everglades"
+featureclass: "National Park Service"
+geojson: >-
+  {"type":"Feature","properties":{},"geometry":{"type":"Polygon","coordinates":[[[-80.48453776041667,25.11564127604167],[-80.48026529947917,25.1251220703125],[-80.47737630208334,25.111409505208343],[-80.48307291666667,25.11075846354167],[-80.495849609375,25.09830729166667],[-80.49796549479167,25.101155598958343],[-80.49576822916667,25.105061848958343],[-80.493408203125,25.106038411458343],[-80.49178059895834,25.11014811197917],[-80.48453776041667,25.11564127604167]]]}}
+number: 80
+title: "Everglades"
+---
